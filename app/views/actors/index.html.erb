@@ -4,8 +4,7 @@
 <div class="row text-center">
   <% @actors.each do |actor| %>
     <div class="col-md-4">
-      <%= actor.thumbnail %>
-      <img src="/<%= actor.thumbnail %>">
+      <%= image_tag actor.thumbnail %>
       <p><%= actor.name %></p>
       <p><%= actor.year_of_birth %></p>
     </div>
