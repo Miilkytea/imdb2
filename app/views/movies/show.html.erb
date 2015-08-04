@@ -18,7 +18,7 @@
 
   <h4>Actors:</h4>
   <% @movie.actors.each do |actor| %>
-    <p><%= link_to actor.name, actor_path(actor) %>, age: <%= actor.age %></p>
+    <p><%= link_to actor.name, actor_path(actor.id) %>, age: <%= actor.age %></p>
   <% end %>
 
   <h4>Reviews:</h4>
