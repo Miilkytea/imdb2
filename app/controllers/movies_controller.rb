@@ -1,6 +1,6 @@
 class MoviesController < ApplicationController
 
-  def index 
+  def index
     @movies = Movie.all
   end
 
@@ -12,12 +12,15 @@ class MoviesController < ApplicationController
     @movie = Movie.find(params[:id])
     if @movie.save(movie_params)
       redirect_to root_path
-
     else
       render 'new'
     end
   end
-   
+
+  def show
+    @movie = Movie.find(params[:id])
+  end
+
   def edit
     @movie = Movie.find(params[:id])
   end
@@ -43,13 +46,13 @@ class MoviesController < ApplicationController
     end
   end
 
-end  
+end
 
   private
 
     def movie_params
       params.require(:movie).permit(:title, :summary, :youtube_embed_id, :thumbnail)
     end
-      
+
 
 
