@@ -22,6 +22,8 @@ class ActorsController < ApplicationController
     @actor = Actor.find(params[:id])
   end
 
+  #abel created show method#
+
   def update
     @actor = Actor.find(params[:id])
     if @actor.update_attributes(actor_params)
