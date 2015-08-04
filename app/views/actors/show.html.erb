@@ -11,3 +11,10 @@
     <p><%= link_to movie.title, movie_path(movie) %></p>
   <% end %>
 </div>
+<div class="row">
+  <div class="text-center">
+    <p><%= link_to "Edit", edit_actor_path(@actor.id) %></p>
+    <p><%= link_to "Delete", @actor, method: :delete %></p>
+  </div>
+</div>
+
