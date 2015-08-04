@@ -9,7 +9,7 @@ class ActorsController < ApplicationController
   end
 
   def create
-    @actor = Actor.find(params[:id])
+    @actor = Actor.new(actor_params)
     if @actor.save(actor_params)
       redirect_to actor_path
 
@@ -18,7 +18,7 @@ class ActorsController < ApplicationController
     end
   end
 
-  def edit 
+  def edit
     @actor = Actor.find(params[:id])
   end
 
@@ -33,7 +33,7 @@ class ActorsController < ApplicationController
       redirect_to actor_path
 
     else
-      render 'edit' 
+      render 'edit'
     end
   end
 
@@ -47,7 +47,7 @@ class ActorsController < ApplicationController
       redirect_to root_path
     end
   end
-    
+
 end
 
 private
