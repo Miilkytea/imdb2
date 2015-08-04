@@ -23,6 +23,9 @@ class ActorsController < ApplicationController
   end
 
   #abel created show method#
+  def show
+    @actor = Actor.find(params[:id])
+  end
 
   def update
     @actor = Actor.find(params[:id])
