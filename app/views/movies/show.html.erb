@@ -26,3 +26,10 @@
     <p>By: <%= review.user.full_name %><br><%= review.body %></p>
   <% end %>
 </div>
+
+<div class="row">
+  <div class="text-center">
+    <p><%= link_to "Edit", edit_movie_path(@movie.id) %></p>
+    <p><%= link_to "Delete", @movie, method: :delete %></p>
+  </div>
+</div>
