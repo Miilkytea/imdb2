@@ -18,12 +18,12 @@
 
   <h4>Actors:</h4>
   <% @movie.actors.each do |actor| %>
-    <p><%= link_to actor.name, actor_path(actor) %>, age: <%= actor.age %></p>
+    <p><%= link_to actor.name, actor_path(actor) %>, age: <%= actor.year_of_birth %></p>
   <% end %>
 
   <h4>Reviews:</h4>
   <% @movie.reviews.each do |review| %>
-    <p>By: <%= review.user.full_name %><br><%= review.body %></p>
+    <p>By: <%= review.user.first_name %><br><%= review.body %></p>
   <% end %>
 </div>
 
